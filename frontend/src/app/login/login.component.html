@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div style="position: relative;top:20vh;">
+  <div class="modal-dialog" >
+    <div class="modal-content">
+      <div class="modal-header thbg-color">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Login To Your Account</h4>
+      </div>
+      <div class="modal-body" style="padding:10vh;">
+        <form class="kode-loginform" #f="ngForm" (ngSubmit)="onSubmitHandler(f)">
+          <p><span>Email</span> <input type="text" placeholder=" Enter Email" ngModel name="email"></p>
+          <p><span>Password</span> <input type="password" placeholder="Enter Password" ngModel name="password"></p>
+          <p><span>Choose Account Type :
+            <select ngModel name="Account">
+              <option value="1">Player</option>
+              <option value="2">Coach</option>
+            </select>
+          </span></p>
+            <button type="submit" class="btn btn-primary">Login Here</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="margin-top:20vh;"></div>
+<app-footer></app-footer>

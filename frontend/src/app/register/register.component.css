@@ -1,0 +1,9 @@
+.r1{
+    font-weight: bold;
+    margin-top:4vh;
+    margin-bottom: 4vh;
+}
+
+.kode-loginform p input[type="text"],.kode-loginform p input[type="password"]{
+    border:2px solid whitesmoke;
+}

@@ -1,0 +1,50 @@
+
+<app-navbar></app-navbar>
+<div style="position: relative;top:20vh;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header thbg-color">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">REGISTER HERE!</h4>
+        </div>
+        <div class="modal-body">
+          <form class="kode-loginform" (ngSubmit)=" onSubmitHandler(f2)" #f2="ngForm">
+            <p><span>Name</span> <input type="text" placeholder=" Enter Name" name="name" ngModel></p>
+            <p><span>Email</span> <input type="text" placeholder="Enter Email" name="email" ngModel></p>
+            <p><span>Password</span> <input type="password" placeholder=" Enter Password" name="password" ngModel></p>
+            <p><span>Weekly Timings</span> <input type="time" placeholder="Enter Weekly Timings" name="timings" ngModel ></p>
+            
+
+             <form>
+              <table>
+                <tr style="font-weight: bold;">
+                  <td style="padding-bottom: 1vh;">Game Name</td>
+                  <td style="padding-bottom: 1vh;">Ranking </td>
+                  <td style="padding-bottom: 1vh;">Action</td>
+                </tr>
+                <tr *ngFor="let game of gamelist" class="r1">
+                     <td>
+                       {{game.name}}
+                     </td>
+                     <td>
+                       <select ngModel name="level" #level1="ngModel">
+                         <option>Beginner</option>
+                         <option>Medium</option>
+                         <option>Advance</option>
+                       </select>
+                     </td>
+                     <td>
+                       <button (click)="addNewGame(game._id,level1)" class="btn btn-sucess" >Add Game</button>
+                     </td>
+                </tr>
+              </table>
+             </form>
+             <br><br>
+              <button type="submit" class="btn btn-primary">Register Here</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<div style="margin-top:20vh;"></div>
+<app-footer></app-footer>  
